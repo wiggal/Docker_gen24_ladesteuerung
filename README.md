@@ -20,5 +20,6 @@ GEN24_Ladesteuerung-main/
 docker built ... ausführen
 
 2.)
+
 Dockerimage von hub.docker.com/repository/docker/wiggal/gen24_ladesteuerung/
 verwenden und config.ini im Container anpassen, oder über Webaufruf
