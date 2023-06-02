@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    gen24:
+        image: wiggal/gen24_ladesteuerung:0.9.0
+        container_name: gen24_ladesteuerung
+        ports:
+            - 80:80
+        volumes:
+            - ./CONFIGS/config.ini:/home/GEN24/config.ini
+            - ./CONFIGS/config.php:/home/GEN24/html/config.php
+            - ./CONFIGS/crontab:/var/tmp/www-data

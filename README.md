@@ -23,3 +23,18 @@ docker built ... ausführen
 
 Dockerimage von hub.docker.com/repository/docker/wiggal/gen24_ladesteuerung/
 verwenden und config.ini im Container anpassen, oder über Webaufruf
+
+3.)
+
+docker-compose
+
+mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung:0.9.0 gemappt werden:
+
+            - ./CONFIGS/config.ini:/home/GEN24/config.ini
+            - ./CONFIGS/config.php:/home/GEN24/html/config.php
+            - ./CONFIGS/crontab:/var/tmp/www-data
+
+Dadurch kann die eigene Konfiguration einfach ins IMAGE geladen werden.
+
+Mit folgendem Befehl kann ein Container erzeugt und gestartet werden:
+docker-compose up -d
