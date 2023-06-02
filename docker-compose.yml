@@ -4,6 +4,7 @@ services:
     gen24:
         image: wiggal/gen24_ladesteuerung:0.9.0
         container_name: gen24_ladesteuerung
+        restart: always
         ports:
             - 80:80
         volumes:
