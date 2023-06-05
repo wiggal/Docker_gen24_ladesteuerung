@@ -28,11 +28,13 @@ verwenden und config.ini im Container anpassen, oder über Webaufruf
 
 docker-compose
 
-mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung:0.9.0 gemappt werden:
+mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung:0.9.0 gemappt werden <br>
+wobei die lokalen Dateien vorhanden sein müsse:
 
-            - ./CONFIGS/config.ini:/home/GEN24/config.ini
-            - ./CONFIGS/config.php:/home/GEN24/html/config.php
-            - ./CONFIGS/crontab:/var/tmp/www-data
+        - ./CONFIGS/config.ini:/home/GEN24/config.ini
+        - ./CONFIGS/config.php:/home/GEN24/html/config.php
+        - ./CONFIGS/Crontab.log:/home/GEN24/Crontab.log
+        - ./CONFIGS/crontab:/var/tmp/www-data
 
 Dadurch kann die eigene Konfiguration einfach ins IMAGE geladen werden.
 

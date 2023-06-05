@@ -10,4 +10,5 @@ services:
         volumes:
             - ./CONFIGS/config.ini:/home/GEN24/config.ini
             - ./CONFIGS/config.php:/home/GEN24/html/config.php
+            - ./CONFIGS/Crontab.log:/home/GEN24/Crontab.log
             - ./CONFIGS/crontab:/var/tmp/www-data
