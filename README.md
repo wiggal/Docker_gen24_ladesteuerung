@@ -1,6 +1,8 @@
 # Docker_gen24_ladesteuerung
 Dockerfile und Beschreibung für das Dockerimage gen24_ladesteuerung
 
+# ACHTUNG Dockerimages noch im TEST
+
 1.)
 
 Vorgehensweise zum erstellen des Dockerimages
@@ -40,3 +42,11 @@ Dadurch kann die eigene Konfiguration einfach ins IMAGE geladen werden.
 
 Mit folgendem Befehl kann ein Container erzeugt und gestartet werden:
 docker-compose up -d
+
+#######################################
+
+Die Dateien  docker-compose.yml und Dockerfile bauen auf Linux ubuntu:22.04 auf.
+Das Image ist nur 685MB groß.
+
+Die Dateien  docker-compose_alpine.yml und Dockerfile_alpine bauen auf Linux alpine:3.14 auf.
+Das Image ist nur 168MB groß.
