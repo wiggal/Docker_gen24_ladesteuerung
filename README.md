@@ -1,8 +1,6 @@
 # Docker_gen24_ladesteuerung
 Dockerfile und Beschreibung für das Dockerimage gen24_ladesteuerung
 
-# ACHTUNG Dockerimages noch im TEST
-
 1.)
 
 Vorgehensweise zum erstellen des Dockerimages
