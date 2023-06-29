@@ -43,8 +43,8 @@ docker-compose up -d
 
 #######################################
 
-Die Dateien  docker-compose.yml und Dockerfile bauen auf Linux ubuntu:22.04 auf.
-Das Image ist nur 685MB groß.
+Die Dateien  docker-compose.yml und Dockerfile bauen auf Linux ubuntu:22.04 auf.<br>
+Das Image ist 685MB groß.
 
-Die Dateien  docker-compose_alpine.yml und Dockerfile_alpine bauen auf Linux alpine:3.14 auf.
-Das Image ist nur 168MB groß.
+Die Dateien  docker-compose_alpine.yml und Dockerfile_alpine bauen auf Linux alpine:3.14 auf.<br>
+Das Image ist 168MB klein ;-).
