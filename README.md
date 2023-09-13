@@ -1,5 +1,5 @@
 # Docker_gen24_ladesteuerung
-Dockerfile und Beschreibung für das Dockerimage gen24_ladesteuerung
+Dockerfile und Beschreibung für das Dockerimage gen24_ladesteuerung_alpine
 
 1.) Nur wenn man selber ein Image erstellen will.
 
@@ -21,14 +21,14 @@ docker built ... ausführen
 
 2.)
 
-Dockerimage von hub.docker.com/repository/docker/wiggal/gen24_ladesteuerung/
-verwenden und config.ini im Container anpassen, oder über Webaufruf
+Dockerimage "latest" von hub.docker.com/repository/docker/wiggal/gen24_ladesteuerung_alpine
+verwenden und config.ini im Container, oder über Webaufruf anpassen
 
 3.)
 
 docker-compose
 
-mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung:0.9.0 gemappt werden <br>
+mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_alpine:latest gemappt werden <br>
 wobei die lokalen Dateien vorhanden sein müsse:
 
         - ./CONFIGS/config.ini:/home/GEN24/config.ini
@@ -45,8 +45,4 @@ docker-compose up -d
 
 Die Dateien  docker-compose.yml und Dockerfile bauen auf Linux alpine:3.14 auf.<br>
 Das Image ist ca. 170 MB klein ;-).
-
-Wird nicht mehr gepflegt!!!<br>
-Die Dateien  docker-compose_ubuntu_veraltet.yml und Dockerfile_ubuntu_veraltet bauen auf Linux ubuntu:22.04 auf.<br>
-Das Image ist ca. 690 MB groß.
 
