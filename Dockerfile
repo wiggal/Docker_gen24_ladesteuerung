@@ -40,10 +40,10 @@ RUN echo "# (Cron version -- $Id: crontab.c,v 2.13 1994/01/17 03:20:37 vixie Exp
 RUN echo "# Edit this file to introduce tasks to be run by cron." >>/var/tmp/www-data
 RUN echo "#\n#" >>/var/tmp/www-data
 RUN echo "# m h  dom mon dow   command" >>/var/tmp/www-data
-RUN echo "#*/5 05-20 * * * /home/GEN24/start_LoggingSymoGen24.sh" >>/var/tmp/www-data
-RUN echo "#*/5 06-19 * * * /home/GEN24/start_SymoGen24Controller2.sh" >>/var/tmp/www-data
-RUN echo "#33 5,8,10,12,14,19 * * * /home/GEN24/start_WeatherDataProvider2.sh" >>/var/tmp/www-data
-RUN echo "#8 5,8,10,15,19 * * * /home/GEN24/start_Solarprognose_WeatherData.py.sh" >>/var/tmp/www-data
+RUN echo "#*/5 06-17 * * * /home/GEN24/start_PythonScript.sh SymoGen24Controller2.py schreiben" >>/var/tmp/www-data
+RUN echo "#33 5,8,10,12,14,19 * * * /home/GEN24/start_PythonScript.sh WeatherDataProvider2.py" >>/var/tmp/www-data
+RUN echo "#8 5,8,10,15,19 * * * /home/GEN24/start_PythonScript.sh Solarprognose_WeatherData.py" >>/var/tmp/www-data
+RUN echo "#0 5,7,9,11,13 * * * /home/GEN24/start_PythonScript.sh Solcast_WeatherData.py" >>/var/tmp/www-data
 RUN echo "### /home/GEN24/Crontab.log abräumen" >>/var/tmp/www-data
 RUN echo "#0 5 * * 1 mv /home/GEN24/Crontab.log /home/GEN24/Crontab.log_weg" >>/var/tmp/www-data
 RUN echo "* * * * * date >> /home/GEN24/Crontab.log" >>/var/tmp/www-data
@@ -58,5 +58,5 @@ RUN touch /var/log/cron.log
 CMD chown -R apache /home/GEN24/ && \
     /usr/sbin/httpd -k start && \
     crontab /var/tmp/www-data && \
-    /usr/sbin/crond -d 0 && \
+    /usr/sbin/crond -f -d 0 && \
     tail -f /var/log/cron.log
