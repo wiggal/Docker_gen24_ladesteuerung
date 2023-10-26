@@ -46,7 +46,6 @@ RUN echo "#8 5,8,10,15,19 * * * /home/GEN24/start_PythonScript.sh Solarprognose_
 RUN echo "#0 5,7,9,11,13 * * * /home/GEN24/start_PythonScript.sh Solcast_WeatherData.py" >>/var/tmp/www-data
 RUN echo "### /home/GEN24/Crontab.log abräumen" >>/var/tmp/www-data
 RUN echo "#0 5 * * 1 mv /home/GEN24/Crontab.log /home/GEN24/Crontab.log_weg" >>/var/tmp/www-data
-RUN echo "* * * * * date >> /home/GEN24/Crontab.log" >>/var/tmp/www-data
 
 RUN chmod +x /home/GEN24/start_*
 RUN >> /home/GEN24/Crontab.log
