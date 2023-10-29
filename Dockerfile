@@ -11,6 +11,7 @@ RUN apk add --update-cache \
     php-json \
     apache2 \
     php-apache2 \
+    php-sqlite3 \
     tzdata \
     python3=~3.9 \
     py-pip \
