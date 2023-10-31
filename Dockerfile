@@ -16,6 +16,7 @@ RUN apk add --update-cache \
     python3=~3.9 \
     py-pip \
     bash \
+    file \
     py3-numpy \
   && pip install pyModbusTCP==v0.1.10 \
   && pip install pickledb \
