@@ -28,18 +28,25 @@ verwenden und config.ini im Container, oder über Webaufruf anpassen
 
 docker-compose
 
-mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_alpine:latest gemappt werden <br>
-wobei die lokalen Dateien vorhanden sein müsse:
+mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_alpine:latest gemappt werden,  
+wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere Datei angelegt werden):  
 
+**_NEU ab Version 0.12.0_**
+        - ./CONFIGS/Crontab.log:/home/GEN24/PV_Daten.sqlite
+**_ENDE NEU_**
+
+```
         - ./CONFIGS/config.ini:/home/GEN24/config.ini
         - ./CONFIGS/config.php:/home/GEN24/html/config.php
         - ./CONFIGS/Crontab.log:/home/GEN24/Crontab.log
+        - ./CONFIGS/Crontab.log:/home/GEN24/PV_Daten.sqlite
         - ./CONFIGS/crontab:/var/tmp/www-data
+```
 
 Dadurch kann die eigene Konfiguration einfach ins IMAGE geladen werden.
 
-Mit folgendem Befehl kann ein Container erzeugt und gestartet werden:
-docker-compose up -d
+Mit folgendem Befehl kann ein Container erzeugt und gestartet werden:  
+`docker-compose up -d`
 
 #######################################
 
