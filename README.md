@@ -48,6 +48,8 @@ Dadurch kann die eigene Konfiguration einfach ins IMAGE geladen werden.
 Mit folgendem Befehl kann ein Container erzeugt und gestartet werden:  
 `docker-compose up -d`
 
+4.) [Ausführung im Synology-Docker siehe Beschreibung im Wiki](https://github.com/wiggal/Docker_gen24_ladesteuerung/wiki/Installation-Dockerimage-von-Gen24%E2%80%90Ladesteuerung-im-Synology%E2%80%90Docker)  
+
 #######################################
 
 Die Dateien  docker-compose.yml und Dockerfile bauen auf Linux alpine:3.14 auf.<br>
