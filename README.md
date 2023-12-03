@@ -39,7 +39,7 @@ wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere
         - ./CONFIGS/config.ini:/home/GEN24/config.ini
         - ./CONFIGS/config.php:/home/GEN24/html/config.php
         - ./CONFIGS/Crontab.log:/home/GEN24/Crontab.log
-        - ./CONFIGS/Crontab.log:/home/GEN24/PV_Daten.sqlite
+        - ./CONFIGS/PV_Daten.sqlite:/home/GEN24/PV_Daten.sqlite
         - ./CONFIGS/crontab:/var/tmp/www-data
 ```
 
