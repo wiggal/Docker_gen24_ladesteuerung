@@ -32,7 +32,7 @@ mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_la
 wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere Datei angelegt werden):  
 
 **_NEU ab Version 0.12.0_**  
-        - ./CONFIGS/Crontab.log:/home/GEN24/PV_Daten.sqlite  
+        - ./CONFIGS/PV_Daten.sqlite:/home/GEN24/PV_Daten.sqlite  
 **_ENDE NEU_**  
 
 ```
