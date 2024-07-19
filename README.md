@@ -31,6 +31,8 @@ docker-compose
 mit der docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_alpine:latest gemappt werden,  
 wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere Datei angelegt werden):  
 
+**Ab Version 0.22.0**
+
 ```
         - ./CONFIGS/CONFIG/default_priv.ini:/home/GEN24/CONFIG/default_priv.ini
         - ./CONFIGS/CONFIG/charge_priv.ini:/home/GEN24/CONFIG/charge_priv.ini
