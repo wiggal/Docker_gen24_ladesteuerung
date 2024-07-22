@@ -2,11 +2,10 @@ version: "3"
 
 services:
     gen24:
-        image: wiggal/gen24_ladesteuerung_alpine:latest
+        image: wiggal/gen24_ladesteuerung_php:latest
         container_name: gen24_ladesteuerung
         restart: always
         ports:
-            - 80:80
             - 2424:2424
         volumes:
             - ./CONFIGS/CONFIG/default_priv.ini:/home/GEN24/CONFIG/default_priv.ini
