@@ -19,9 +19,7 @@ RUN apk add --update-cache \
     file \
     py3-numpy \
   && pip install pyModbusTCP==v0.1.10 \
-  && pip install pickledb \
   && pip install pytz \
-  && pip install xmltodict \
   && pip install requests \
   && pip install ping3 \
   && rm -rf /var/cache/apk/* \
