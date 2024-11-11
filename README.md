@@ -1,8 +1,8 @@
 # Docker_gen24_ladesteuerung  
 
-### Dockerfiles und Beschreibung für folgende Dockerimages:  
+**:warning:ACHTUNG: Apacheimage fällt ab Version 0.25.3 weg, und die Modbusversion wird entfernt.** 
 
-gen24_ladesteuerung_apache: Hier ist der Apachewebserver auf Port 80 konfiguriert.  
+### Dockerfiles und Beschreibung für folgende Dockerimages:  
 
 gen24_ladesteuerung_php: Hier ist der in PHP eingebaute Webserver auf Port 2424 konfiguriert.  
 
@@ -21,12 +21,11 @@ In Verzeichnis (entpacktes Zipfile von GEN24_Ladesteuerung) GEN24_Ladesteuerung-
 Anlegen und anpassen der xy_priv.ini im Verzeichnis CONFIG.   
 Anlegen und anpassen von html/config_priv.php.  
 
-
 docker built ... ausführen
 
 ### 2.) docker-compose
 
-mit der jeweiligen docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_....:latest gemappt werden,  
+mit der php_docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_php:latest gemappt werden,  
 wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere Datei angelegt werden):  
 
 **Ab Version 0.24.0 Prog_Steuerung.sqlite**
