@@ -1,10 +1,14 @@
 # The source image to start with
-FROM alpine:3.14
+FROM alpine:3.20.3
 
 # Your contact info
 MAINTAINER wiggal ;ludwig.sporrer@gmx.de
 
-ENV CONTAINER_TIMEZONE="Europe/Berlin"
+# Setzen der Umgebungsvariablen für die deutsche Sprache
+ENV CONTAINER_TIMEZONE="Europe/Berlin" \
+    LANG=de_DE.UTF-8 \
+    LANGUAGE=de_DE:de \
+    LC_ALL=de_DE.UTF-8
 
 COPY GEN24_Ladesteuerung-main/ /home/GEN24
 
@@ -13,15 +17,17 @@ RUN apk add --update-cache \
     php-json \
     php-sqlite3 \
     tzdata \
-    python3=~3.9 \
+    python3 \
     py-pip \
     bash \
     file \
     py3-numpy \
-  && pip install pyModbusTCP==v0.1.10 \
-  && pip install pytz \
-  && pip install requests \
-  && pip install ping3 \
+    py3-tz \
+    py3-requests \
+    py3-pandas \
+    py3-numpy \
+    py3-scikit-learn \
+  && pip3 install ping3 --break-system-packages\
   && rm -rf /var/cache/apk/* \
 && cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
 && sed -i 's/^Einfacher_PHP_Webserver.*/Einfacher_PHP_Webserver = 1/' /home/GEN24/CONFIG/default.ini \
