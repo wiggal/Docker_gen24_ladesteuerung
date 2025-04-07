@@ -1,7 +1,5 @@
 # Docker_gen24_ladesteuerung  
 
-**:warning:ACHTUNG: Apacheimage fällt ab Version 0.25.3 weg, und die Modbusversion wird entfernt.:warning:** 
-
 ### Dockerfiles und Beschreibung für folgende Dockerimages:  
 
 gen24_ladesteuerung_php: Hier ist der in PHP eingebaute Webserver auf Port 2424 konfiguriert.  
