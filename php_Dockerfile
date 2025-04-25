@@ -21,12 +21,7 @@ RUN apk add --update-cache \
     py-pip \
     bash \
     file \
-    py3-numpy \
-    py3-tz \
     py3-requests \
-    py3-pandas \
-    py3-numpy \
-    py3-scikit-learn \
   && rm -rf /var/cache/apk/* \
 && cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
 && sed -i 's/^Einfacher_PHP_Webserver.*/Einfacher_PHP_Webserver = 1/' /home/GEN24/CONFIG/default.ini \
