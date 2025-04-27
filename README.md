@@ -32,6 +32,7 @@ wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere
         - ./CONFIGS/CONFIG/default_priv.ini:/home/GEN24/CONFIG/default_priv.ini
         - ./CONFIGS/CONFIG/charge_priv.ini:/home/GEN24/CONFIG/charge_priv.ini
         - ./CONFIGS/CONFIG/weather_priv.ini:/home/GEN24/CONFIG/weather_priv.ini
+        - ./CONFIGS/CONFIG/dynprice_priv.ini:/home/GEN24/CONFIG/dynprice_priv.ini
         - ./CONFIGS/CONFIG/Prog_Steuerung.sqlite:/home/GEN24/CONFIG/Prog_Steuerung.sqlite
         - ./CONFIGS/config_priv.php:/home/GEN24/html/config_priv.php
         - ./CONFIGS/Crontab.log:/home/GEN24/Crontab.log
