@@ -35,7 +35,10 @@ RUN apk add --update-cache \
 && touch /var/log/cron.log
 
 # Alle Befehle die Nach dem Imagestart ausgeführt werden müssen
-CMD /home/GEN24/start_PythonScript.sh /home/GEN24/FORECAST/Forecast_solar__WeatherData.py && \
+CMD sh -c '\
+    if [ ! -s /home/GEN24/weatherData.sqlite ]; then \
+      /home/GEN24/start_PythonScript.sh /home/GEN24/FORECAST/Forecast_solar__WeatherData.py; \
+    fi' && \
     crontab /var/tmp/www-data && \
     /usr/sbin/crond -f -d 0 && \
     tail -f /var/log/cron.log

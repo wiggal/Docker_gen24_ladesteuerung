@@ -24,9 +24,9 @@ docker built ... ausführen
 ### 2.) docker-compose
 
 mit der php_docker-compose.yml können folgende Dateien in das Image wiggal/gen24_ladesteuerung_php:latest gemappt werden,  
-wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere Datei angelegt werden):  
+wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite und weatherData.sqlite können als leere Datei angelegt werden):  
 
-**Ab Version 0.24.0 Prog_Steuerung.sqlite**
+**Ab Version 0.30.0 weatherData.sqlite mappen**
 
 ```
         - ./CONFIGS/CONFIG/default_priv.ini:/home/GEN24/CONFIG/default_priv.ini
@@ -37,6 +37,7 @@ wobei die lokalen Dateien vorhanden sein müssen (PV_Daten.sqlite kann als leere
         - ./CONFIGS/config_priv.php:/home/GEN24/html/config_priv.php
         - ./CONFIGS/Crontab.log:/home/GEN24/Crontab.log
         - ./CONFIGS/PV_Daten.sqlite:/home/GEN24/PV_Daten.sqlite
+        - ./CONFIGS/weatherData.sqlite:/home/GEN24/weatherData.sqlite
         - ./CONFIGS/crontab:/var/tmp/www-data
 ```
 
