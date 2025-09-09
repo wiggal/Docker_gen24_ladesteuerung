@@ -1,3 +1,8 @@
+# !!ACHTUNG: Repo veraltet!!!!
+09.09.2025
+# gültig nur bis Version 0.38.0, ab Version 0.38.1 siehe GEN24_Ladesteuerung
+
+---
 # Docker_gen24_ladesteuerung  
 
 ### Dockerfiles und Beschreibung für folgende Dockerimages:  
